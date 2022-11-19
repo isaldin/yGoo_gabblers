@@ -1,0 +1,13 @@
+{
+  "name": "fastify-json-rpc-proxy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"dependencies": {
+    "@fastify/http-proxy": "^8.3.0",
+    "fastify": "^4.10.0"
+  }
+}

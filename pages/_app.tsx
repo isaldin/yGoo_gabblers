@@ -8,7 +8,7 @@ import {GobblersContextApp} from 'contexts/useGobblers';
 import {WalletContextApp} from 'contexts/useWallet';
 import {YearnContextApp} from 'contexts/useYearn';
 
-import	'../style.css';
+import	'../style.scss';
 
 const transition = {duration: 0.3, ease: [0.17, 0.67, 0.83, 0.67]};
 const variants = {
@@ -25,17 +25,6 @@ function	WithLayout(props: AppProps): ReactElement {
 		<div id={'app'} className={'mx-auto mb-0 flex max-w-6xl'}>
 			<div className={'flex min-h-[100vh] w-full flex-col'}>
 				<Header />
-				<div className={'md:mb-0 md:mt-16'}>
-					<div className={'mx-auto flex w-full max-w-6xl flex-col items-center justify-center'}>
-						<div className={'mt-10 w-full'}>
-							<div className={'flex w-full flex-col items-center justify-center text-center text-4xl font-bold uppercase text-neutral-900 md:text-8xl'}>
-								<b className={'tabular-nums'}>
-									{'Goo goo yGoo'}
-								</b>
-							</div>
-						</div>
-					</div>
-				</div>
 				<AnimatePresence mode={'wait'}>
 					<motion.div
 						key={router.asPath}
@@ -54,7 +43,7 @@ function	WithLayout(props: AppProps): ReactElement {
 
 function	MyApp(props: AppProps): ReactElement {
 	const	{Component, pageProps} = props;
-	
+
 	return (
 		<WithYearn
 			options={{

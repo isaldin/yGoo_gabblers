@@ -18,11 +18,14 @@
 }
 
 :root {
+	--accent_color: #120040;
+
 	& .yveCRV--nav-link {
-		@apply relative cursor-pointer transition-colors text-neutral-500 hover:text-neutral-900 font-normal;
-		
+		@apply relative cursor-pointer transition-colors text-neutral-900 hover:text-neutral-900 font-normal;
+
 		&.active {
 			@apply text-neutral-900 font-bold;
+			color: var(--accent_color);
 		}
 	}
 	& .yveCRV--dropdown-menu {
@@ -53,7 +56,9 @@
 	}
 }
 
-
+body {
+	background: #EE478A !important;
+}
 
 .wordWrapper {
 	display: inline-block;

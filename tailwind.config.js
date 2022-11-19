@@ -17,6 +17,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			colors: {
+				accent: '#120040'
+			},
 			fontFamily: {
 				aeonik: ['Aeonik', ...defaultTheme.fontFamily.sans],
 				mono: ['Aeonik Mono', ...defaultTheme.fontFamily.mono]
@@ -37,7 +40,11 @@ module.exports = {
 			fontSize: {
 				'3xl': ['32px', '40px'],
 				'7xl': ['64px', '72px'],
-				'8xl': ['88px', '104px']
+				'8xl': ['88px', '104px'],
+				'10xl': ['158px', '158px']
+			},
+			lineHeight: {
+				'title': '90px'
 			}
 		}
 	},

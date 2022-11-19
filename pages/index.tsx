@@ -7,14 +7,23 @@ import Wrapper from 'components/apps/ygoo/Wrapper';
 import {useGobblers} from 'contexts/useGobblers';
 import {useWallet} from 'contexts/useWallet';
 
+import Title from '../components/common/Title';
+
 function	Index(): ReactElement {
 	const	{balances} = useWallet();
 	const	{gobblers} = useGobblers();
 
 	console.log(gobblers);
+	const	gooAmount = balances[toAddress(process.env.GOO_TOKEN_ADDRESS)];
 
 	return (
 		<>
+			<div className={'mt-36'}>
+				<Title>
+					{'More goo for you'}
+				</Title>
+			</div>
+
 			<div className={'mt-8 mb-10 w-full max-w-6xl text-center'}>
 				<b className={'text-center text-lg md:text-2xl'}>{'Squirt me daddy'}</b>
 				<p className={'mt-8 whitespace-pre-line text-center text-base text-neutral-600'}>
@@ -39,7 +48,7 @@ function	Index(): ReactElement {
 			<div className={'mt-20 grid grid-cols-3 gap-10'}>
 				<div className={'col-span-3 flex w-full flex-col items-center border-2 border-neutral-0 bg-neutral-100 p-6'}>
 					<b className={'text-lg'}>{'Wrap me tight daddy'}</b>
-					<p className={'py-6 text-center text-xl'}>{`Squeeze my ${format.amount(balances[toAddress(process.env.GOO_TOKEN_ADDRESS)]?.normalized, 2, 2)} Goo`}</p>
+					<p className={'py-6 text-center text-xl'}>{`Squeeze my ${gooAmount ? format.amount(gooAmount.normalized, 2, 2) : 0} Goo`}</p>
 					<div className={'mt-auto'}>
 						<Button>
 							{'Oh yes, wrap them'}

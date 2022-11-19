@@ -36,7 +36,7 @@ class MyDocument extends Document {
 
 	render(): ReactElement {
 		return (
-			<Html lang={'en'} className={'goo'}>
+			<Html lang={'en'} className={'gooo'}>
 				<Head>
 					<link
 						rel={'preconnect'}

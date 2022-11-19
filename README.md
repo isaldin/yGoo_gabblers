@@ -45,3 +45,7 @@ This project can be run with Docker.
 1. Build the image: `docker build -t [name-of-your-container] .`
 2. Run the container: `docker run -p 3000:3000 [name-of-your-container]`
 3. Open the browser and navigate to `http://localhost:3000`
+
+### Development process
+If you use custom dev rpc for working (http://95.216.241.177/secret/gobble/ in our case), just run in separate terminal mini \
+json-rpc proxy from `helpers/json-rpc-proxy` folder with command `yarn start` (don't forget to install deps).

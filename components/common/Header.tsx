@@ -26,21 +26,21 @@ function	Header(): ReactElement {
 
 	return (
 		<>
-			<header className={'gfixed inset-x-0 top-0 z-50 mb-5 flex w-full max-w-[1200px] flex-row items-center justify-between bg-neutral-0 p-4 text-xs sm:text-sm md:inset-x-auto md:mb-0 md:px-0 md:text-base'}>
+			<header className={'gfixed inset-x-0 top-0 z-50 mb-5 flex w-full max-w-[1200px] flex-row items-center justify-between p-4 text-xs sm:text-sm md:inset-x-auto md:mb-0 md:px-0 md:text-base'}>
 				<nav className={'col-s hidden w-1/3 flex-row items-center space-x-3 md:flex md:space-x-6'}>
 					<Link href={'/'}>
 						<p className={`yveCRV--nav-link ${router.pathname === '/' ? 'active' : '' }`}>
-							{'Home'}
+							{'Main'}
+						</p>
+					</Link>
+					<Link href={'/wrap'}>
+						<p className={`yveCRV--nav-link ${router.pathname === '/claim' ? 'active' : '' }`}>
+							{'Wrap/Unwrap'}
 						</p>
 					</Link>
 					<Link href={'/claim'}>
 						<p className={`yveCRV--nav-link ${router.pathname === '/claim' ? 'active' : '' }`}>
 							{'Claim'}
-						</p>
-					</Link>
-					<Link href={'/farm'}>
-						<p className={`yveCRV--nav-link ${router.pathname === '/farm' ? 'active' : '' }`}>
-							{'Farm'}
 						</p>
 					</Link>
 					<Link href={'/about'}>
